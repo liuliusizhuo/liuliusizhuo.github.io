@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  color: #222;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    url("/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 32px;
+  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.header-text h1 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+}
+
+.header-text p {
+  margin: 4px 0;
+}
+
+.nav {
+  margin: 0 0 28px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+}
+
+.nav a {
+  margin-right: 18px;
+  color: #0645ad;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.language-switch {
+  float: right;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.publication {
+  margin-bottom: 22px;
+}
+
+.publication-title {
+  font-weight: 700;
+}
+
+.publication-meta {
+  color: #555;
+}
+
+.footer {
+  margin-top: 40px;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .language-switch {
+    float: none;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}
