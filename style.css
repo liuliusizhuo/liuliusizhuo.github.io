@@ -124,3 +124,20 @@ h2 {
     margin-bottom: 8px;
   }
 }
+
+.chinese-name {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #555;
+  margin-left: 10px;
+}
+
+.zh-line {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: -2px;
+}
+
+.bilingual-profile p {
+  margin: 6px 0;
+}
