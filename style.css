@@ -141,3 +141,7 @@ h2 {
 .bilingual-profile p {
   margin: 6px 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
