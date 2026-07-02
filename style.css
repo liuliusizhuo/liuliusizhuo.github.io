@@ -23,6 +23,8 @@ body {
   padding: 40px 24px 80px;
 }
 
+/* Header */
+
 .site-header {
   display: flex;
   align-items: center;
@@ -49,9 +51,31 @@ body {
   font-size: 2.1rem;
 }
 
+.english-name {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #444;
+  margin-left: 12px;
+}
+
 .header-text p {
   margin: 4px 0;
 }
+
+.header-tagline {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0.25rem 0;
+  color: #222;
+}
+
+.header-tagline.zh-line {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Navigation */
 
 .nav {
   margin: 0 0 28px;
@@ -76,8 +100,11 @@ body {
   float: right;
 }
 
+/* Cards and headings */
+
 .card {
   background: rgba(255, 255, 255, 0.9);
+  color: #222;
   padding: 28px 32px;
   margin-bottom: 24px;
   border-radius: 16px;
@@ -90,6 +117,53 @@ h2 {
   padding-bottom: 8px;
 }
 
+/* About Me */
+
+.bilingual-profile h2 {
+  margin-bottom: 1rem;
+}
+
+.bilingual-profile p {
+  margin: 6px 0;
+}
+
+.profile-intro p {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  margin: 0.3rem 0;
+  color: #222;
+}
+
+.research-keywords {
+  margin-top: 1.5rem;
+}
+
+.research-keywords h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+
+.research-keywords ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.research-keywords li {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #f2f2f2;
+  color: #222;
+  font-size: 0.98rem;
+}
+
+/* Publications */
+
 .publication {
   margin-bottom: 22px;
 }
@@ -99,50 +173,10 @@ h2 {
 }
 
 .publication-meta {
-  color: #555;
+  color: #444;
 }
 
-.footer {
-  margin-top: 40px;
-  color: #666;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-@media (max-width: 700px) {
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .language-switch {
-    float: none;
-    display: block;
-    margin-top: 10px;
-  }
-
-  .nav a {
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-}
-
-.english-name {
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: #555;
-  margin-left: 12px;
-}
-
-.zh-line {
-  color: #555;
-  font-size: 0.95rem;
-  margin-top: -2px;
-}
-
-.bilingual-profile p {
-  margin: 6px 0;
-}
+/* Education */
 
 .education-item {
   margin-bottom: 1.4rem;
@@ -168,47 +202,46 @@ h2 {
   white-space: nowrap;
 }
 
-.bilingual-profile h2 {
-  margin-bottom: 1rem;
-}
-
-.profile-intro p {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  margin: 0.3rem 0;
-}
-
-.profile-intro .zh-line {
-  font-size: 1.35rem;
-  font-weight: 500;
-}
-
-.research-keywords {
-  margin-top: 1.5rem;
-}
-
-.research-keywords h3 {
-  font-size: 1rem;
-  margin-bottom: 0.6rem;
-  color: #555;
-}
-
-.research-keywords ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.research-keywords li {
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: #f2f2f2;
-  font-size: 0.95rem;
-
-
 .education-item ul {
   margin-top: 0.3rem;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 40px;
+  color: #444;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .english-name {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .language-switch {
+    float: none;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .education-heading {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 }
