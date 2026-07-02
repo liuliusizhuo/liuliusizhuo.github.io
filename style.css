@@ -245,3 +245,18 @@ h2 {
     gap: 0.1rem;
   }
 }
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 4px 0;
+}
+
+.contact-icon {
+  width: 1.05em;
+  height: 1.05em;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
