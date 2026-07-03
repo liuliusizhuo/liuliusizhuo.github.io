@@ -1,5 +1,13 @@
+/* =========================
+   全局基础设置
+========================= */
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -8,6 +16,7 @@ body {
   line-height: 1.7;
   color: #222;
 
+  /* 背景图片 + 白色遮罩。0.65 越小，背景越明显；越大，背景越淡。 */
   background:
     linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)),
     url("/assets/background.jpg");
@@ -17,13 +26,31 @@ body {
   background-attachment: fixed;
 }
 
+a {
+  color: #0645ad;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   页面主容器
+========================= */
+
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 24px 80px;
 }
 
-/* Header */
+
+/* =========================
+   顶部个人信息区域
+========================= */
 
 .site-header {
   display: flex;
@@ -62,6 +89,7 @@ body {
   margin: 4px 0;
 }
 
+/* 顶部中英对照的研究方向/身份信息 */
 .header-tagline {
   font-size: 1.15rem;
   line-height: 1.5;
@@ -75,7 +103,10 @@ body {
   color: #222;
 }
 
-/* Navigation */
+
+/* =========================
+   导航栏
+========================= */
 
 .nav {
   margin: 0 0 28px;
@@ -86,6 +117,7 @@ body {
 }
 
 .nav a {
+  display: inline-block;
   margin-right: 18px;
   color: #0645ad;
   text-decoration: none;
@@ -96,11 +128,15 @@ body {
   text-decoration: underline;
 }
 
+/* 如果以后恢复语言切换按钮，可以继续用这个类 */
 .language-switch {
   float: right;
 }
 
-/* Cards and headings */
+
+/* =========================
+   通用卡片与标题
+========================= */
 
 .card {
   background: rgba(255, 255, 255, 0.9);
@@ -117,7 +153,14 @@ h2 {
   padding-bottom: 8px;
 }
 
-/* About Me */
+h3 {
+  color: #222;
+}
+
+
+/* =========================
+   About Me / Profile 简介区域
+========================= */
 
 .bilingual-profile h2 {
   margin-bottom: 1rem;
@@ -134,6 +177,17 @@ h2 {
   color: #222;
 }
 
+/* 中文辅助行 */
+.zh-line {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   研究关键词标签
+========================= */
+
 .research-keywords {
   margin-top: 1.5rem;
 }
@@ -142,7 +196,6 @@ h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
-  color: #222;
 }
 
 .research-keywords ul {
@@ -162,21 +215,60 @@ h2 {
   font-size: 0.98rem;
 }
 
-/* Publications */
 
-.publication {
-  margin-bottom: 22px;
+/* =========================
+   Publications 研究成果
+   使用紧凑参考文献格式
+========================= */
+
+#publications h2 {
+  margin-bottom: 1rem;
 }
 
-.publication-title {
-  font-weight: 700;
+#publications h3 {
+  margin-top: 26px;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
-.publication-meta {
-  color: #444;
+#publications h3:first-of-type {
+  margin-top: 12px;
 }
 
-/* Education */
+/* 紧凑型参考文献列表 */
+.bibliography {
+  margin: 0 0 26px 0;
+  padding-left: 1.6em;
+}
+
+.bibliography li {
+  margin-bottom: 10px;
+  padding-left: 0.2em;
+  line-height: 1.75;
+}
+
+.bibliography li::marker {
+  font-weight: 500;
+}
+
+/* J1 / C1 / T1 这类自定义编号 */
+.pub-id {
+  font-weight: 600;
+  color: #555;
+  margin-right: 4px;
+}
+
+/* 原题、日文题目等辅助信息 */
+.original-title {
+  font-weight: 400;
+  color: #666;
+}
+
+
+/* =========================
+   Education 教育经历
+========================= */
 
 .education-item {
   margin-bottom: 1.4rem;
@@ -206,45 +298,10 @@ h2 {
   margin-top: 0.3rem;
 }
 
-/* Footer */
 
-.footer {
-  margin-top: 40px;
-  color: #444;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* Responsive */
-
-@media (max-width: 700px) {
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .english-name {
-    display: block;
-    margin-left: 0;
-    margin-top: 4px;
-  }
-
-  .language-switch {
-    float: none;
-    display: block;
-    margin-top: 10px;
-  }
-
-  .nav a {
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .education-heading {
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-}
+/* =========================
+   Contact 联系方式与图标
+========================= */
 
 .contact-line {
   display: flex;
@@ -260,123 +317,78 @@ h2 {
   flex-shrink: 0;
 }
 
-.publications h2 {
-  margin-bottom: 1rem;
-}
-
-.publication-section {
-  margin-top: 1.6rem;
-}
-
-.publication-section h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-  color: #222;
-}
-
-.publication-list {
-  margin: 0;
-  padding-left: 1.4rem;
-}
-
-.publication-list li {
-  margin-bottom: 1rem;
-}
-
-.publication-title {
-  font-weight: 600;
-}
-
-.publication-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0 0 28px;
-}
-
-.publication-item {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 14px;
-  margin-bottom: 22px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.publication-item:last-child {
-  border-bottom: none;
-}
-
-.pub-number {
-  font-weight: 700;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.publication-title {
-  font-weight: 700;
-  margin: 0 0 4px;
-}
-
-.publication-meta {
-  margin: 0;
-  color: #444;
-}
-
-.publication-links {
-  margin-top: 5px;
-}
-
-.original-title {
-  font-weight: 400;
-  color: #666;
-}
-
-.publication-meta {
-  color: #444;
-}
 
 /* =========================
-   参考文献格式
+   Footer 页脚
 ========================= */
 
-.bibliography {
-  margin: 0 0 26px 0;
-  padding-left: 1.6em;
+.footer {
+  margin-top: 40px;
+  color: #444;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.bibliography li {
-  margin-bottom: 10px;
-  padding-left: 0.2em;
-  line-height: 1.75;
-}
 
-.bibliography li::marker {
-  font-weight: 500;
-}
+/* =========================
+   移动端适配
+========================= */
 
-.pub-id {
-  font-weight: 600;
-  color: #555;
-  margin-right: 4px;
-}
+@media (max-width: 700px) {
+  .container {
+    padding: 28px 16px 64px;
+  }
 
-.original-title {
-  color: #666;
-}
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 22px;
+  }
 
-#publications h3 {
-  margin-top: 26px;
-  margin-bottom: 12px;
-  font-size: 1.25rem;
-}
+  .profile-photo {
+    width: 135px;
+    height: 135px;
+  }
 
-#publications h3:first-of-type {
-  margin-top: 12px;
-}
+  .header-text h1 {
+    font-size: 1.9rem;
+  }
 
-#publications a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
+  .english-name {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
 
+  .nav {
+    padding: 12px 16px;
+  }
+
+  .nav a {
+    margin-right: 14px;
+    margin-bottom: 8px;
+  }
+
+  .language-switch {
+    float: none;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .card {
+    padding: 24px 22px;
+  }
+
+  .education-heading {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .bibliography {
+    padding-left: 1.25em;
+  }
+
+  .bibliography li {
+    line-height: 1.65;
+  }
+}
