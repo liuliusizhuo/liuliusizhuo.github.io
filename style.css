@@ -252,13 +252,6 @@ h3 {
   font-weight: 500;
 }
 
-/* J1 / C1 / T1 这类自定义编号 */
-.pub-id {
-  font-weight: 600;
-  color: #555;
-  margin-right: 4px;
-}
-
 /* 原题、日文题目等辅助信息 */
 .original-title {
   font-weight: 400;
