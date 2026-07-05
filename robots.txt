@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saitakun.github.io/sitemap.xml
+Sitemap: https://liuliusizhuo.github.io/sitemap.xml
